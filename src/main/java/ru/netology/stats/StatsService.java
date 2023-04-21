@@ -18,7 +18,7 @@ public class StatsService {
     public int maxSalesMonth(long[] sales) {
         int maxMonth = 0;
         for (int i = 1; i < sales.length; i++) {
-            if (sales[i] > sales[maxMonth]) {
+            if (sales[i] >= sales[maxMonth]) {
                 maxMonth = i;
             }
         }
@@ -28,7 +28,7 @@ public class StatsService {
     public int minSalesMonth(long[] sales) {
         int minMonth = 0;
         for (int i = 1; i < sales.length; i++) {
-            if (sales[i] < sales[minMonth]) {
+            if (sales[i] <= sales[minMonth]) {
                 minMonth = i;
             }
         }
